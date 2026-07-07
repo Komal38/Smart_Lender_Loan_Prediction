@@ -73,7 +73,7 @@ SMART_LENDER/
 Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Komal38/Smart_Lender_Loan_Prediction
 ```
 
 Install dependencies

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        {% if "Approved" in prediction %}
+
+            <div style="text-align:center;">
+
+                <div style="font-size:70px;">✅</div>
+
+                <h1 style="color:#28a745;">Loan Approved</h1>
+
+                <p class="subtitle">
+
+                    Congratulations!
+
+                    <br><br>
+
+                    Based on the applicant details, the model predicts that the loan is likely to be approved.
+
+                </p>
+
+            </div>
+
+        {% else %}
+
+            <div style="text-align:center;">
+
+                <div style="font-size:70px;">❌</div>
+
+                <h1 style="color:#dc3545;">Loan Rejected</h1>
+
+                <p class="subtitle">
+
+                    Unfortunately, the applicant does not satisfy the approval criteria according to the trained model.
+
+                </p>
+
+            </div>
+
+        {% endif %}
+
+        <button
+            type="button"
+            onclick="window.location.href='/'">
+
+            Predict Another Loan
+
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

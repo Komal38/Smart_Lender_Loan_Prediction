@@ -8,6 +8,12 @@ The project helps banks and financial institutions automate loan approval decisi
 
 ---
 
+## 🌐 Live Demo
+
+🔗 https://smart-lender-loan-prediction-2wns.onrender.com
+
+---
+
 ## Features
 
 - Data Exploration (EDA)

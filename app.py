@@ -7,9 +7,10 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
 
-model = pickle.load(open(os.path.join(BASE_DIR, "../models/rdf.pkl"), "rb"))
-scaler = pickle.load(open(os.path.join(BASE_DIR, "../models/scaler.pkl"), "rb"))
+model = pickle.load(open(os.path.join(MODEL_DIR, "rdf.pkl"), "rb"))
+scaler = pickle.load(open(os.path.join(MODEL_DIR, "scaler.pkl"), "rb"))
 
 
 @app.route("/")
